@@ -11,7 +11,9 @@ import os
 
 
 def main():
+    print("STARTING PROGRAMM NUMBER 1 !!!!!!!!!!!!!!!!! 11111")
     e = Env()
+    print("STARTING PROGRAMM NUMBER 2 !!!!!!!!!!!!!!!!! 22222")
     # Get Azure machine learning workspace
     aml_workspace = Workspace.get(
         name=e.workspace_name,
