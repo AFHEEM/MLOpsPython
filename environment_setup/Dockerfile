@@ -11,7 +11,7 @@ ENV PATH /usr/local/envs/mlopspython_ci/bin:$PATH
 
 RUN conda update -n base -c defaults conda && \
     conda install python=3.7.5 && \
-    conda install PyJWT=2.0 && \
+    conda install PyJWT==1.7.1 azure-cli==2.16.0 && \
     conda env create -f /setup/ci_dependencies.yml && \
     /bin/bash -c "source activate mlopspython_ci" && \
     az --version && \
