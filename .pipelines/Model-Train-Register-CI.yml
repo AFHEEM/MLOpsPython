@@ -33,6 +33,11 @@ stages:
     timeoutInMinutes: 0
     steps:
     - template: code-quality-template.yml
+    - task: DockerInstaller@0
+      displayName: Docker Installer
+      inputs:
+        dockerVersion: 17.09.0-ce
+        releaseType: stable
     - task: AzureCLI@1
       inputs:
         azureSubscription: '$(WORKSPACE_SVC_CONNECTION)'
